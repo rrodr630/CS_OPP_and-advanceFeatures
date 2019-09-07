@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,6 +38,10 @@ namespace OOPandInheritance
 
             Console.WriteLine("*********  STARTING TEST  **********");
             garageTest.garage.ForEach(action);
+
+            add2(toyota); // pass by reference (shallow copy)
+            Console.WriteLine(toyota.Doors);
         }
+        static void add2(Vehicle car) { car.Doors += 2; }
     }
 }
